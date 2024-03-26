@@ -7,6 +7,7 @@ ADD . /build/
 RUN mkdir /tmp/cache
 RUN CGO_ENABLED=0 GOCACHE=/tmp/cache go build  -mod=vendor -v -o /tmp/api-server .
 
+# use scratch
 FROM scratch
 
 WORKDIR /app
