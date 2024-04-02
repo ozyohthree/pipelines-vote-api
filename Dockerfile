@@ -2,6 +2,8 @@ FROM image-registry.openshift-image-registry.svc:5000/openshift/golang:latest as
 
 # workdir
 WORKDIR /build
+
+# Add all to build folder
 ADD . /build/
 
 
